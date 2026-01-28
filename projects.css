@@ -1,0 +1,258 @@
+/* =========================
+   BACK LINK
+========================= */
+.back-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.back-icon {
+  width: 18px;
+  height: 18px;
+}
+
+body.dark .back-icon {
+  filter: invert(1);
+}
+
+/* =========================
+   ICON BUTTONS
+========================= */
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.icon-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+body.dark .icon-btn img {
+  filter: invert(1);
+}
+
+/* =========================
+   SEARCH BAR
+========================= */
+.search-bar {
+  max-width: 1100px;
+  margin: 20px auto 0;
+  padding: 0 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* =========================
+   FILTER BAR
+========================= */
+.filter-bar {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 0 20px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: var(--muted);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.filter-btn.active {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+body.dark .filter-btn {
+  color: #ffffff;
+}
+
+/* =========================
+   PROJECT GRID
+========================= */
+.projects-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+  overflow-x: hidden;
+}
+
+/* =========================
+   APP CARD
+========================= */
+.app-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.app-top {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.app-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+}
+
+.app-info h3 {
+  margin-bottom: 6px;
+}
+
+.app-info p {
+  font-size: 14px;
+  opacity: 0.85;
+  margin-bottom: 8px;
+}
+
+/* =========================
+   BADGES
+========================= */
+.badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.badge {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: var(--muted);
+}
+
+.badge.cross {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.badge.android {
+  background: #22c55e;
+  color: #fff;
+}
+
+.badge.ios {
+  background: #111;
+  color: #fff;
+}
+
+.badge.soon {
+  background: #f59e0b;
+  color: #111;
+}
+
+/* =========================
+   META & BUTTON
+========================= */
+.meta {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.btn.small {
+  align-self: flex-start;
+  padding: 8px 14px;
+  font-size: 14px;
+}
+
+.btn.disabled {
+  background: var(--muted);
+  color: var(--text);
+  cursor: not-allowed;
+}
+
+/* =========================
+   RESPONSIVE SEARCH VISIBILITY
+========================= */
+
+/* Mobile: hide search bar initially */
+@media (max-width: 768px) {
+  .search-bar {
+    display: none;
+  }
+
+  .search-bar.show {
+    display: block;
+  }
+}
+
+/* Tablet & Desktop: hide search icon */
+@media (min-width: 769px) {
+  #search-toggle {
+    display: none;
+  }
+}
+
+/* =========================
+   MOBILE OPTIMIZATION
+========================= */
+@media (max-width: 480px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+
+  .app-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .app-info h3 {
+    font-size: 15px;
+  }
+
+  .app-info p {
+    font-size: 13px;
+  }
+
+  .meta {
+    font-size: 11px;
+  }
+}
+
+/* =========================
+   DESKTOP / TABLET REFINEMENT
+========================= */
+@media (min-width: 769px) {
+  .projects-container {
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 24px
+  }
+
+  .app-card {
+    padding: 20px;
+  }
+
+  .app-icon {
+    width: 64px;
+    height: 64px;
+  }
+}

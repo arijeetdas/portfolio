@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dice Roller | App Details</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="app.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="nav-container">
+    <a href="projects.html" class="icon-btn back-btn">
+      <img src="assets/icons/back.svg" alt="Back" />
+    </a>
+
+    <div class="nav-actions">
+      <button id="theme-toggle" class="icon-btn theme-toggle-app">
+  <img id="theme-icon" src="assets/icons/moon.svg" alt="Theme toggle" />
+</button>
+
+    </div>
+  </div>
+</header>
+
+<!-- APP HEADER -->
+<section class="app-header">
+  <img class="app-icon-large" src="assets/apps/dice.png" alt="Dice Roller" />
+
+  <div class="app-meta">
+    <h1>Dice Roller</h1>
+    <p class="version">Version <strong>1.1.0</strong></p>
+    <p class="uploaded">Uploaded by <strong>Arijeet Das</strong></p>
+
+    <span class="badge cross">Cross-platform</span>
+
+    <!-- PLATFORM SELECTOR -->
+    <div class="platforms">
+      <button class="platform-btn" data-platform="android">
+        <img src="assets/icons/android.svg" />
+      </button>
+      <button class="platform-btn disabled" data-platform="ios">
+        <img src="assets/icons/ios.svg" />
+      </button>
+      <button class="platform-btn" data-platform="windows">
+        <img src="assets/icons/windows.svg" />
+      </button>
+      <button class="platform-btn disabled" data-platform="macos">
+        <img src="assets/icons/macos.svg" />
+      </button>
+      <button class="platform-btn disabled" data-platform="linux">
+        <img src="assets/icons/linux.svg" />
+      </button>
+    </div>
+
+    <a id="download-btn" class="btn" href="#" download>
+      Download
+    </a>
+  </div>
+</section>
+
+<!-- SCREENSHOTS -->
+<section class="screenshots">
+  <h2>Screenshots</h2>
+  <div id="screenshot-container" class="screenshot-row"></div>
+</section>
+
+<!-- CHANGELOG -->
+<section class="content-block">
+  <h2>Changelog</h2>
+  <ul>
+    <li><strong>v1.1.0</strong> – Changed background color, updated dice images, updated app icon, updated tag line, improved performance.</li>
+    <li>v1.0 – Initial release.</li>
+  </ul>
+</section>
+
+<!-- INSTALLATION -->
+<section class="content-block">
+  <h2>Installation</h2>
+  <ol id="install-steps"></ol>
+</section>
+
+<!-- LINKS -->
+<section class="content-block">
+  <h2>Links & Feedback</h2>
+  <div class="links">
+    <a class="link-item" href="#">
+      <img src="assets/icons/github.svg" />
+      GitHub Repository
+    </a>
+    <a class="link-item" href="mailto:yourmail@example.com">
+      <img src="assets/icons/mail.svg" />
+      Send Feedback
+    </a>
+  </div>
+</section>
+
+<script src="script.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

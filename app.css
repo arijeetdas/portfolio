@@ -1,0 +1,175 @@
+/* =========================
+   ICON BUTTONS (NAV)
+========================= */
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.icon-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+/* IMPORTANT:
+   No filters here.
+   Theme toggle icon is handled via explicit SVGs
+   (moon.svg / sun-white.svg)
+*/
+
+/* =========================
+   APP HEADER
+========================= */
+.app-header {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.app-icon-large {
+  width: 180px;
+  height: 180px;
+  border-radius: 24px;
+}
+
+.app-meta h1 {
+  margin-bottom: 8px;
+}
+
+.version,
+.uploaded {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* =========================
+   PLATFORM SELECTOR
+========================= */
+.platforms {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.platform-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  cursor: pointer;
+}
+
+.platform-btn img {
+  width: 22px;
+}
+
+/* Active platform */
+.platform-btn.active {
+  border-color: var(--accent);
+}
+
+/* Disabled platform */
+.platform-btn.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Make platform icons visible in dark mode */
+body.dark .platform-btn img {
+  filter: invert(1);
+}
+
+/* =========================
+   SCREENSHOTS
+========================= */
+.screenshots {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.screenshot-row {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+
+  /* Hide scrollbar but keep scrolling */
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE / Edge */
+}
+
+.screenshot-row::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari */
+}
+
+.screenshot-row img {
+  height: 280px;
+  border-radius: 12px;
+}
+
+/* =========================
+   CONTENT BLOCKS
+========================= */
+.content-block {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.content-block h2 {
+  margin-bottom: 16px;
+}
+
+/* =========================
+   LINKS & FEEDBACK
+========================= */
+.links {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.link-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.link-item img {
+  width: 18px;
+}
+
+/* Make GitHub & mail icons visible in dark mode */
+body.dark .link-item img {
+  filter: invert(1);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .platforms {
+    justify-content: center;
+  }
+}
+
+/* =========================================
+   APP PAGE – BACK ARROW DARK MODE FIX
+   (ISOLATED, SAFE)
+========================================= */
+body.dark .back-btn img {
+  filter: invert(1);
+}

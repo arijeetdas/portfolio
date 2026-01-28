@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Arijeet Das</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="projects.css" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="navbar">
+  <div class="nav-container">
+
+    <!-- BACK -->
+    <a href="index.html" class="back-link">
+      <img src="assets/icons/back.svg" alt="Back" class="back-icon" />
+      <span>Projects</span>
+    </a>
+
+    <!-- ACTIONS -->
+    <div class="nav-actions">
+      <button id="search-toggle" class="icon-btn" aria-label="Search">
+        <img src="assets/icons/search.svg" alt="Search" />
+      </button>
+
+      <button id="theme-toggle" aria-label="Toggle theme">
+        <img id="theme-icon" src="assets/icons/moon.svg" alt="Theme toggle" />
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<!-- SEARCH BAR -->
+<section class="search-bar" id="search-bar">
+  <input
+    type="text"
+    id="search-input"
+    placeholder="Search apps..."
+    aria-label="Search apps"
+  />
+</section>
+
+<!-- FILTER BAR -->
+<section class="filter-bar">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="cross">Cross-platform</button>
+  <button class="filter-btn" data-filter="android">Android</button>
+  <button class="filter-btn" data-filter="ios">iOS</button>
+</section>
+
+<!-- PROJECT LIST -->
+<main class="projects-container">
+
+  <!-- Dice Roller -->
+  <div class="app-card" data-platform="cross" data-name="dice roller">
+    <div class="app-top">
+      <img src="assets/apps/dice.png" alt="Dice Roller" class="app-icon" />
+
+      <div class="app-info">
+        <h3>Dice Roller</h3>
+        <p>
+          A simple and interactive dice rolling application built with Flutter,
+          focused on clean UI and responsive behavior.
+        </p>
+
+        <div class="badges">
+          <span class="badge cross">Cross-platform</span>
+        </div>
+
+        <span class="meta">v1.0</span>
+      </div>
+    </div>
+
+    <a href="app.html" target="_blank" class="btn small">View more</a>
+  </div>
+
+  <!-- Coming Soon: Meals App -->
+  <div class="app-card coming-soon" data-platform="cross" data-name="meals app">
+    <div class="app-top">
+      <img src="assets/apps/meals.png" alt="Meals App" class="app-icon" />
+
+      <div class="app-info">
+        <h3>Meals App</h3>
+        <p>
+          A recipe and meal-planning application focused on clean design and
+          intuitive browsing.
+        </p>
+
+        <div class="badges">
+          <span class="badge cross">Cross-platform</span>
+          <span class="badge soon">Coming Soon</span>
+        </div>
+
+        <span class="meta">In development</span>
+      </div>
+    </div>
+
+    <button class="btn small disabled" disabled>Coming Soon</button>
+  </div>
+
+</main>
+
+<script src="script.js"></script>
+<script src="projects.js"></script>
+</body>
+</html>
