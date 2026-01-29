@@ -56,8 +56,8 @@ function updatePlatform(platform) {
   /* Update download button */
   downloadBtn.textContent = data.downloadText;
   downloadBtn.href = data.downloadUrl;
-  downloadBtn.target = "_blank";
-  downloadBtn.rel = "noopener noreferrer";
+  /* downloadBtn.target = "_blank"; */
+  /* downloadBtn.rel = "noopener noreferrer"; */
 
 
   /* ALWAYS load ALL screenshots */
