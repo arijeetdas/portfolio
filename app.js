@@ -17,7 +17,7 @@ const allScreenshots = [
 const platformData = {
   android: {
     downloadText: "Download for Android",
-    downloadUrl: "https://drive.google.com/file/d/18rmX9asUZj85q5B4lJ5A7bN_ww19P_Gq/view?usp=drive_link",
+    downloadUrl: "https://github.com/arijeetdas/dice_app/releases/download/v1.1.0/DiceApp-Android-v1.1.0.apk",
     steps: [
       "Download the APK file",
       "Enable installation from unknown sources",
@@ -27,11 +27,21 @@ const platformData = {
 
   windows: {
     downloadText: "Download for Windows",
-    downloadUrl: "https://drive.google.com/file/d/1vEock7SuGadzm_OScHxACDB9NeJJvqUz/view?usp=drive_link",
+    downloadUrl: "https://github.com/arijeetdas/dice_app/releases/download/v1.1.0/DiceApp-Windows-v1.1.0.zip",
     steps: [
       "Download the zip file",
       "Extract the zip file",
       "Launch the .exe application"
+    ]
+  },
+
+  linux: {
+    downloadText: "Download for Linux",
+    downloadUrl: "https://github.com/arijeetdas/dice_app/releases/download/v1.1.0/DiceApp-Linux-v1.1.0.zip",
+    steps: [
+      "Download the zip file",
+      "Extract the zip file",
+      "Launch the application"
     ]
   }
 };
@@ -83,4 +93,8 @@ platformButtons.forEach(btn => {
 });
 
 /* INITIAL LOAD */
+const defaultBtn = document.querySelector('.platform-btn[data-platform="android"]');
+if (defaultBtn) {
+  defaultBtn.classList.add("active");
+}
 updatePlatform("android");
