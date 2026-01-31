@@ -57,3 +57,8 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+window.addEventListener("load", () => {
+  const homeSection = document.querySelector("#home");
+  homeSection.classList.add("show");
+});
