@@ -13,99 +13,103 @@
 </head>
 <body>
 
-<!-- NAVBAR -->
 <header class="navbar">
   <div class="nav-container">
-    <a href="projects.html" class="icon-btn back-btn">
-      <img src="assets/icons/back.svg" alt="Back" />
+    <a href="projects.html" class="back-link">
+      <img src="assets/icons/back.svg" alt="Back" class="back-icon" />
+      <span>Back to Projects</span>
     </a>
 
     <div class="nav-actions">
-      <button id="theme-toggle" class="icon-btn theme-toggle-app">
-  <img id="theme-icon" src="assets/icons/moon.svg" alt="Theme toggle" />
-</button>
-
+      <button id="theme-toggle" aria-label="Toggle theme">
+        <img id="theme-icon" src="assets/icons/moon.svg" alt="Theme toggle" />
+      </button>
     </div>
   </div>
 </header>
 
-<!-- APP HEADER -->
-<section class="app-header">
-  <img class="app-icon-large" src="assets/apps/dice.png" alt="Dice Roller" />
+<main class="app-page">
+  <section class="app-header reveal">
+    <img class="app-icon-large" src="assets/apps/dice.png" alt="Dice Roller" />
 
-  <div class="app-meta">
-    <h1>Dice Roller</h1>
-    <p class="version">Version <strong>1.1.0</strong></p>
-    <p class="uploaded">Uploaded by <strong>Arijeet Das</strong></p>
+    <div class="app-meta">
+      <p class="eyebrow">Featured App</p>
+      <h1>Dice Roller</h1>
+      <p class="version">Version <strong>1.1.0</strong></p>
+      <p class="uploaded">Built and maintained by <strong>Arijeet Das</strong></p>
 
-    <span class="badge cross">Cross-platform</span>
+      <div class="badges">
+        <span class="badge cross">Cross-platform</span>
+        <span class="badge">Flutter</span>
+      </div>
 
-    <!-- PLATFORM SELECTOR -->
-    <div class="platforms">
-      <button class="platform-btn" data-platform="android">
-        <img src="assets/icons/android.svg" />
-      </button>
-      <button class="platform-btn disabled" data-platform="ios">
-        <img src="assets/icons/ios.svg" />
-      </button>
-      <button class="platform-btn" data-platform="windows">
-        <img src="assets/icons/windows.svg" />
-      </button>
-      <button class="platform-btn disabled" data-platform="macos">
-        <img src="assets/icons/macos.svg" />
-      </button>
-      <button class="platform-btn" data-platform="linux">
-        <img src="assets/icons/linux.svg" />
-      </button>
+      <div class="platforms" aria-label="Select platform">
+        <button class="platform-btn" data-platform="android" aria-label="Android">
+          <img src="assets/icons/android.svg" alt="Android" />
+        </button>
+        <button class="platform-btn disabled" data-platform="ios" aria-label="iOS unavailable">
+          <img src="assets/icons/ios.svg" alt="iOS" />
+        </button>
+        <button class="platform-btn" data-platform="windows" aria-label="Windows">
+          <img src="assets/icons/windows.svg" alt="Windows" />
+        </button>
+        <button class="platform-btn disabled" data-platform="macos" aria-label="macOS unavailable">
+          <img src="assets/icons/macos.svg" alt="macOS" />
+        </button>
+        <button class="platform-btn" data-platform="linux" aria-label="Linux">
+          <img src="assets/icons/linux.svg" alt="Linux" />
+        </button>
+      </div>
+
+      <a id="download-btn" class="btn" href="#" download>Download</a>
     </div>
+  </section>
 
-    <a id="download-btn" class="btn" href="#" download>
-      Download
-    </a>
-  </div>
-</section>
+  <section class="content-block reveal">
+    <h2>Description</h2>
+    <p>
+      Dice Roller is a lightweight Flutter application built to demonstrate clean architecture,
+      responsive UI behavior, and consistent interaction quality across multiple platforms.
+    </p>
+  </section>
 
-<!-- Description -->
- <section class="content-block">
-  <h2>Description</h2>
-  <p>A simple and interactive dice rolling application built with Flutter, focused on clean UI and responsive behavior.</p>
- </section>
+  <section class="screenshots reveal">
+    <h2>Screenshots</h2>
+    <div id="screenshot-container" class="screenshot-row"></div>
+  </section>
 
-<!-- SCREENSHOTS -->
-<section class="screenshots">
-  <h2>Screenshots</h2>
-  <div id="screenshot-container" class="screenshot-row"></div>
-</section>
+  <section class="content-grid reveal">
+    <section class="content-block card-style">
+      <h2>Changelog</h2>
+      <ul>
+        <li><strong>v1.1.0</strong> – Refined visual system, upgraded app icon and dice assets, and improved runtime performance.</li>
+        <li><strong>v1.0.0</strong> – Initial release.</li>
+      </ul>
+    </section>
 
-<!-- CHANGELOG -->
-<section class="content-block">
-  <h2>Changelog</h2>
-  <ul>
-    <li><strong>v1.1.0</strong> – Changed background color, updated dice images, updated app icon, updated tag line, improved performance.</li>
-    <li>v1.0 – Initial release.</li>
-  </ul>
-</section>
+    <section class="content-block card-style">
+      <h2>Installation</h2>
+      <ol id="install-steps"></ol>
+    </section>
+  </section>
 
-<!-- INSTALLATION -->
-<section class="content-block">
-  <h2>Installation</h2>
-  <ol id="install-steps"></ol>
-</section>
+  <section class="content-block reveal">
+    <h2>Links & Feedback</h2>
+    <p>Explore the source code and share feedback, suggestions, or collaboration opportunities.</p>
+    <div class="links">
+      <a class="link-item" target="_blank" rel="noopener noreferrer" href="https://github.com/arijeetdas/dice_app">
+        <img src="assets/icons/github.svg" alt="GitHub" />
+        GitHub Repository
+      </a>
+      <a class="link-item" href="mailto:arijeetdas900@gmail.com">
+        <img src="assets/icons/mail.svg" alt="Email" />
+        Send Feedback
+      </a>
+    </div>
+  </section>
+</main>
 
-<!-- LINKS -->
-<section class="content-block">
-  <h2>Links & Feedback</h2>
-  <div class="links">
-    <a class="link-item" target="_blank" href="https://github.com/arijeetdas/dice_app">
-      <img src="assets/icons/github.svg" />
-      GitHub Repository
-    </a>
-    <a class="link-item" href="mailto:arijeetdas900@gmail.com">
-      <img src="assets/icons/mail.svg" />
-      Send Feedback
-    </a>
-  </div>
-</section>
+<footer>© 2026 Arijeet Das • Product-focused development</footer>
 
 <script src="script.js"></script>
 <script src="app.js"></script>

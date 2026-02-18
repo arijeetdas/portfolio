@@ -54,29 +54,35 @@ function updatePlatform(platform) {
   activePlatform = platform;
 
   /* Update download button */
-  downloadBtn.textContent = data.downloadText;
-  downloadBtn.href = data.downloadUrl;
+  if (downloadBtn) {
+    downloadBtn.textContent = data.downloadText;
+    downloadBtn.href = data.downloadUrl;
+  }
   /* downloadBtn.target = "_blank"; */
   /* downloadBtn.rel = "noopener noreferrer"; */
 
 
   /* ALWAYS load ALL screenshots */
-  screenshotContainer.innerHTML = "";
-  allScreenshots.forEach(src => {
-    const img = document.createElement("img");
-    img.src = src;
-    img.alt = "App screenshot";
-    img.loading = "lazy";
-    screenshotContainer.appendChild(img);
-  });
+  if (screenshotContainer) {
+    screenshotContainer.innerHTML = "";
+    allScreenshots.forEach((src, index) => {
+      const img = document.createElement("img");
+      img.src = src;
+      img.alt = `Dice Roller screenshot ${index + 1}`;
+      img.loading = "lazy";
+      screenshotContainer.appendChild(img);
+    });
+  }
 
   /* Update installation steps */
-  installSteps.innerHTML = "";
-  data.steps.forEach(step => {
-    const li = document.createElement("li");
-    li.textContent = step;
-    installSteps.appendChild(li);
-  });
+  if (installSteps) {
+    installSteps.innerHTML = "";
+    data.steps.forEach((step) => {
+      const li = document.createElement("li");
+      li.textContent = step;
+      installSteps.appendChild(li);
+    });
+  }
 }
 
 /* Platform button click handling */

@@ -1,175 +1,199 @@
-/* =========================
-   ICON BUTTONS (NAV)
-========================= */
-.icon-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
+.app-page {
+  width: var(--container);
+  margin: 0 auto;
+  padding: 2.2rem 0 2.8rem;
 }
 
-.icon-btn img {
-  width: 20px;
-  height: 20px;
-}
-
-/* IMPORTANT:
-   No filters here.
-   Theme toggle icon is handled via explicit SVGs
-   (moon.svg / sun-white.svg)
-*/
-
-/* =========================
-   APP HEADER
-========================= */
 .app-header {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 20px;
-  display: flex;
-  gap: 40px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg-elevated);
+  backdrop-filter: blur(10px);
+  padding: 1.4rem;
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 1.35rem;
   align-items: center;
+  box-shadow: var(--shadow-soft);
 }
 
 .app-icon-large {
   width: 180px;
   height: 180px;
-  border-radius: 24px;
+  border-radius: 28px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: 0.5rem;
 }
 
 .app-meta h1 {
-  margin-bottom: 8px;
+  font-size: clamp(1.7rem, 4vw, 2.35rem);
+  margin-bottom: 0.5rem;
+  text-wrap: balance;
+  background: linear-gradient(135deg, var(--text) 45%, var(--accent) 130%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .version,
 .uploaded {
-  font-size: 14px;
-  opacity: 0.8;
+  font-size: 0.94rem;
 }
 
-/* =========================
-   PLATFORM SELECTOR
-========================= */
+.badges {
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  margin: 0.85rem 0;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  border-radius: 999px;
+  padding: 0 0.62rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-muted);
+}
+
+.badge.cross {
+  color: #ffffff;
+  border-color: transparent;
+  background: linear-gradient(135deg, #3b82f6, #22d3ee);
+}
+
 .platforms {
   display: flex;
-  gap: 12px;
-  margin: 20px 0;
+  align-items: center;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+  margin: 1rem 0 1.1rem;
 }
 
 .platform-btn {
   width: 44px;
   height: 44px;
-  border-radius: 10px;
+  border-radius: 12px;
   border: 1px solid var(--border);
-  background: var(--bg);
+  background: var(--surface);
+  display: grid;
+  place-items: center;
   cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.platform-btn:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent);
 }
 
 .platform-btn img {
   width: 22px;
+  height: 22px;
 }
 
-/* Active platform */
 .platform-btn.active {
   border-color: var(--accent);
+  box-shadow: inset 0 0 0 1px rgba(37, 99, 235, 0.25);
+  background: linear-gradient(180deg, var(--surface), var(--surface-2));
 }
 
-/* Disabled platform */
 .platform-btn.disabled {
   opacity: 0.4;
   cursor: not-allowed;
 }
 
-/* Make platform icons visible in dark mode */
 body.dark .platform-btn img {
   filter: invert(1);
 }
 
-/* =========================
-   SCREENSHOTS
-========================= */
-.screenshots {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-.screenshot-row {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-
-  /* Hide scrollbar but keep scrolling */
-  scrollbar-width: none;        /* Firefox */
-  -ms-overflow-style: none;     /* IE / Edge */
-}
-
-.screenshot-row::-webkit-scrollbar {
-  display: none;                /* Chrome, Safari */
-}
-
-.screenshot-row img {
-  height: 280px;
-  border-radius: 12px;
-}
-
-/* =========================
-   CONTENT BLOCKS
-========================= */
 .content-block {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 20px;
+  margin-top: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--bg-elevated);
+  backdrop-filter: blur(10px);
+  padding: 1.1rem;
+  box-shadow: var(--shadow-soft);
 }
 
 .content-block h2 {
-  margin-bottom: 16px;
+  margin-bottom: 0.72rem;
 }
 
-/* =========================
-   LINKS & FEEDBACK
-========================= */
-.links {
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
+.content-block ul,
+.content-block ol {
+  padding-left: 1.2rem;
+  color: var(--text-muted);
 }
 
-.link-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  color: var(--accent);
-  font-weight: 500;
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
 }
 
-.link-item img {
-  width: 18px;
+.card-style {
+  margin-top: 0;
 }
 
-/* Make GitHub & mail icons visible in dark mode */
-body.dark .link-item img {
-  filter: invert(1);
+.screenshots {
+  margin-top: 1rem;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 768px) {
+.screenshot-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+
+.screenshot-row img {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  aspect-ratio: 4 / 7;
+  object-fit: cover;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.screenshot-row img:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 860px) {
   .app-header {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     text-align: center;
   }
 
+  .app-icon-large {
+    margin: 0 auto;
+  }
+
+  .badges,
   .platforms {
     justify-content: center;
   }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
-/* =========================================
-   APP PAGE – BACK ARROW DARK MODE FIX
-   (ISOLATED, SAFE)
-========================================= */
-body.dark .back-btn img {
-  filter: invert(1);
+@media (max-width: 560px) {
+  .app-page {
+    padding-top: 1.5rem;
+  }
+
+  .app-icon-large {
+    width: 150px;
+    height: 150px;
+  }
 }

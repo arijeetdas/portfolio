@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
   <meta charset="UTF-8" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.png" type="image/png">
@@ -14,23 +13,8 @@
 
 <header class="navbar">
   <div class="nav-container">
-    <!-- NAME -->
     <div class="logo">Arijeet.</div>
 
-    <!-- PUSH EVERYTHING AFTER NAME TO THE RIGHT -->
-    <div class="nav-actions">
-      <!-- THEME TOGGLE (ALWAYS VISIBLE) -->
-      <button id="theme-toggle" aria-label="Toggle theme">
-        <img id="theme-icon" src="assets/icons/moon.svg" alt="Theme toggle" />
-      </button>
-
-      <!-- HAMBURGER -->
-      <button id="menu-btn" class="menu-btn">
-        <img src="assets/icons/menu.svg" alt="Menu" />
-      </button>
-    </div>
-
-    <!-- NAV (HIDDEN ON MOBILE, CONTROLLED BY HAMBURGER) -->
     <nav id="nav">
       <ul class="nav-links">
         <li><a href="#home" class="nav-link active">Home</a></li>
@@ -40,10 +24,23 @@
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
     </nav>
+
+    <div class="nav-actions">
+      <button id="theme-toggle" aria-label="Toggle theme">
+        <img id="theme-icon" src="assets/icons/moon.svg" alt="Theme toggle" />
+      </button>
+
+      <button id="menu-btn" class="menu-btn" aria-label="Toggle navigation menu">
+        <span class="menu-icon" aria-hidden="true">
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+        </span>
+      </button>
+    </div>
   </div>
 </header>
 
-<!-- HOME -->
 <section id="home" class="section-full reveal">
   <div class="hero-content">
     <div class="hero-image">
@@ -51,30 +48,36 @@
     </div>
 
     <div class="hero-text">
+      <p class="eyebrow">App Developer • Flutter • Android • iOS</p>
       <h1>Hi, I'm <span>Arijeet Das</span></h1>
       <p>
-        Computer Science Engineering student focused on clean logic,
-        strong fundamentals, and real-world development.
+        I design and ship high-quality applications with clean architecture, strong performance, and user-centered UX across mobile and cross-platform environments.
       </p>
-      <a href="assets/resume/Arijeet_Das_Resume.pdf" download class="btn">
-        Download Resume
-      </a>
+      <div class="hero-cta">
+        <a href="assets/resume/Arijeet_Das_Resume.pdf" download class="btn">Download Resume</a>
+        <a href="#projects" class="btn btn-secondary">Explore Projects</a>
+      </div>
+      <div class="hero-metrics">
+        <div><strong>Mobile-first</strong><span>Built for real-world users</span></div>
+        <div><strong>Clean UX</strong><span>Consistent product quality</span></div>
+        <div><strong>Engineering quality</strong><span>Scalable, maintainable code</span></div>
+      </div>
     </div>
   </div>
 </section>
 
 <div class="separator"></div>
 
-<!-- ABOUT -->
 <section id="about" class="section-full reveal">
   <div class="split">
     <img src="assets/images/about.svg" class="illus illus-lg" alt="About" />
     <div>
       <h2>About Me</h2>
       <p>
-        I am a Computer Science Engineering student focused on mobile and application development, with experience across cross-platform and native ecosystems including Flutter, Android, and iOS fundamentals. I have a strong grasp of core computer science concepts and apply them to build reliable, scalable applications with clean architecture and maintainable code.
-
-I enjoy working across the full development lifecycle—from translating requirements into well-structured components to optimizing performance and ensuring a smooth user experience. I value clarity in design, consistency in code, and adaptability in fast-paced startup environments as well as structured, large-scale corporate projects.
+        I am a Computer Science Engineering student focused on app development, with hands-on experience across Flutter and native ecosystems. I use core computer science fundamentals to build reliable, scalable products with clear architecture and long-term maintainability.
+      </p>
+      <p>
+        I enjoy owning the full development lifecycle, from translating requirements into robust implementation to performance tuning and UX refinement. I prioritize clarity, consistency, and execution speed, and I adapt quickly in both startup-paced and structured team environments.
       </p>
     </div>
   </div>
@@ -82,7 +85,6 @@ I enjoy working across the full development lifecycle—from translating require
 
 <div class="separator"></div>
 
-<!-- SKILLS -->
 <section id="skills" class="section-full reveal">
   <div class="split">
     <img src="assets/images/skills.svg" class="illus illus-md" alt="Skills" />
@@ -107,14 +109,13 @@ I enjoy working across the full development lifecycle—from translating require
 
 <div class="separator"></div>
 
-<!-- PROJECTS -->
 <section id="projects" class="section-full reveal">
   <div class="split">
     <img src="assets/images/projects.svg" class="illus illus-lg" alt="Projects" />
     <div>
       <h2>Projects</h2>
       <p>
-        I build practical, user-focused applications with an emphasis on clean UI, scalable architecture, and maintainable logic—working across Flutter and native mobile development, and extending solutions to desktop and web where appropriate.
+        My work focuses on practical products that balance strong engineering with polished design. The portfolio includes cross-platform Flutter applications and platform-ready builds for Android, iOS, Windows, and Linux.
       </p>
       <a href="projects.html" class="btn">View All Projects</a>
     </div>
@@ -123,29 +124,28 @@ I enjoy working across the full development lifecycle—from translating require
 
 <div class="separator"></div>
 
-<!-- CONTACT -->
 <section id="contact" class="section-full reveal">
   <div class="split">
-    <img src="assets/images/contact.svg" class="illus illus-lg alt="Contact" />
+    <img src="assets/images/contact.svg" class="illus illus-lg" alt="Contact" />
     <div>
       <h2>Contact</h2>
+      <p>Open to internships and app development roles where product quality and user impact matter.</p>
       <div class="contact-links">
-  <a href="https://github.com/arijeetdas" target="_blank" class="contact-item">
-    <img src="assets/icons/github.svg" alt="GitHub" />
-    <span>GitHub</span>
-  </a>
+        <a href="https://github.com/arijeetdas" target="_blank" rel="noopener noreferrer" class="contact-item">
+          <img src="assets/icons/github.svg" alt="GitHub" />
+          <span>GitHub</span>
+        </a>
 
-  <a href="#" target="_blank" class="contact-item">
-    <img src="assets/icons/linkedin.svg" alt="LinkedIn" />
-    <span>LinkedIn</span>
-  </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="contact-item">
+          <img src="assets/icons/linkedin.svg" alt="LinkedIn" />
+          <span>LinkedIn</span>
+        </a>
 
-  <a href="mailto:arijeetdas900@gmail.com" class="contact-item">
-    <img src="assets/icons/mail.svg" alt="Email" />
-    <span>Email</span>
-  </a>
-</div>
-
+        <a href="mailto:arijeetdas900@gmail.com" class="contact-item">
+          <img src="assets/icons/mail.svg" alt="Email" />
+          <span>Email</span>
+        </a>
+      </div>
     </div>
   </div>
 </section>

@@ -1,201 +1,201 @@
-/* =========================
-   BACK LINK
-========================= */
-.back-link {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 600;
+.projects-page {
+  width: var(--container);
+  margin: 0 auto;
+  padding: 2.2rem 0 3rem;
 }
 
-.back-icon {
-  width: 18px;
-  height: 18px;
+.projects-hero {
+  max-width: 760px;
+  margin-bottom: 1.8rem;
 }
 
-body.dark .back-icon {
-  filter: invert(1);
+.projects-hero h1 {
+  font-size: clamp(1.8rem, 4vw, 2.65rem);
+  margin-bottom: 0.65rem;
+  text-wrap: balance;
+  background: linear-gradient(135deg, var(--text) 40%, var(--accent) 120%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-/* =========================
-   ICON BUTTONS
-========================= */
-.icon-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
+.projects-hero p {
+  font-size: 1.02rem;
 }
 
-.icon-btn img {
-  width: 20px;
-  height: 20px;
+.toolbar {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.9rem;
+  margin-bottom: 1rem;
 }
 
-body.dark .icon-btn img {
-  filter: invert(1);
-}
-
-/* =========================
-   SEARCH BAR
-========================= */
 .search-bar {
-  max-width: 1100px;
-  margin: 20px auto 0;
-  padding: 0 20px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, var(--surface), var(--surface-2));
+  padding: 0.55rem;
+  box-shadow: var(--shadow-soft);
 }
 
 .search-bar input {
   width: 100%;
-  padding: 10px 14px;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  background: var(--bg);
+  height: 42px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
   color: var(--text);
+  padding: 0 0.75rem;
+  font-size: 0.95rem;
 }
 
-/* =========================
-   FILTER BAR
-========================= */
+.search-bar input:focus {
+  outline: none;
+}
+
+.search-bar:focus-within {
+  border-color: var(--accent);
+}
+
 .filter-bar {
-  max-width: 1100px;
-  margin: 20px auto;
-  padding: 0 20px;
   display: flex;
-  gap: 12px;
+  align-items: center;
+  gap: 0.6rem;
   flex-wrap: wrap;
 }
 
 .filter-btn {
-  background: var(--muted);
-  border: none;
-  padding: 8px 16px;
-  border-radius: 20px;
+  height: 38px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-muted);
+  padding: 0 1rem;
+  font-weight: 600;
   cursor: pointer;
-  font-weight: 500;
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.filter-btn:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent);
 }
 
 .filter-btn.active {
-  background: var(--accent);
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
   color: #ffffff;
+  border-color: transparent;
 }
 
-body.dark .filter-btn {
-  color: #ffffff;
-}
-
-/* =========================
-   PROJECT GRID
-========================= */
 .projects-container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 20px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 20px;
-  overflow-x: hidden;
+  gap: 1rem;
 }
 
-/* =========================
-   APP CARD
-========================= */
 .app-card {
+  border-radius: var(--radius-md);
   border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 18px;
-  background: var(--bg);
+  background: var(--bg-elevated);
+  backdrop-filter: blur(9px);
+  padding: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  justify-content: space-between;
+  gap: 1rem;
+  transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 2px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  opacity: 0.7;
+}
+
+.app-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(37, 99, 235, 0.28);
+  box-shadow: var(--shadow);
 }
 
 .app-top {
   display: flex;
-  gap: 16px;
-  align-items: flex-start;
+  gap: 0.9rem;
 }
 
 .app-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 12px;
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: 0.2rem;
 }
 
 .app-info h3 {
-  margin-bottom: 6px;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.01em;
 }
 
 .app-info p {
-  font-size: 14px;
-  opacity: 0.85;
-  margin-bottom: 8px;
+  font-size: 0.9rem;
+  margin-bottom: 0.62rem;
 }
 
-/* =========================
-   BADGES
-========================= */
 .badges {
   display: flex;
-  gap: 8px;
+  align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 6px;
+  gap: 0.4rem;
+  margin-bottom: 0.38rem;
 }
 
 .badge {
-  font-size: 11px;
-  padding: 4px 10px;
-  border-radius: 20px;
-  background: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  border-radius: 999px;
+  padding: 0 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-muted);
 }
 
 .badge.cross {
-  background: #3b82f6;
-  color: #fff;
-}
-
-.badge.android {
-  background: #22c55e;
-  color: #fff;
-}
-
-.badge.ios {
-  background: #111;
-  color: #fff;
+  color: #ffffff;
+  border-color: transparent;
+  background: linear-gradient(135deg, #3b82f6, #22d3ee);
 }
 
 .badge.soon {
-  background: #f59e0b;
-  color: #111;
+  color: #0f172a;
+  border-color: transparent;
+  background: linear-gradient(135deg, #f59e0b, #facc15);
 }
 
-/* =========================
-   META & BUTTON
-========================= */
 .meta {
-  font-size: 12px;
-  opacity: 0.6;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
 }
 
-.btn.small {
-  align-self: flex-start;
-  padding: 8px 14px;
-  font-size: 14px;
+.coming-soon {
+  opacity: 0.9;
 }
 
-.btn.disabled {
-  background: var(--muted);
-  color: var(--text);
-  cursor: not-allowed;
-}
+@media (max-width: 900px) {
+  #search-toggle {
+    display: grid;
+  }
 
-/* =========================
-   RESPONSIVE SEARCH VISIBILITY
-========================= */
-
-/* Mobile: hide search bar initially */
-@media (max-width: 768px) {
   .search-bar {
     display: none;
   }
@@ -205,54 +205,27 @@ body.dark .filter-btn {
   }
 }
 
-/* Tablet & Desktop: hide search icon */
-@media (min-width: 769px) {
+@media (min-width: 901px) {
   #search-toggle {
     display: none;
   }
 }
 
-/* =========================
-   MOBILE OPTIMIZATION
-========================= */
-@media (max-width: 480px) {
+@media (max-width: 560px) {
+  .projects-page {
+    padding-top: 1.5rem;
+  }
+
   .projects-container {
     grid-template-columns: 1fr;
   }
 
-  .app-icon {
-    width: 48px;
-    height: 48px;
-  }
-
-  .app-info h3 {
-    font-size: 15px;
-  }
-
-  .app-info p {
-    font-size: 13px;
-  }
-
-  .meta {
-    font-size: 11px;
-  }
-}
-
-/* =========================
-   DESKTOP / TABLET REFINEMENT
-========================= */
-@media (min-width: 769px) {
-  .projects-container {
-    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-    gap: 24px
-  }
-
-  .app-card {
-    padding: 20px;
+  .app-top {
+    flex-direction: column;
   }
 
   .app-icon {
-    width: 64px;
-    height: 64px;
+    width: 54px;
+    height: 54px;
   }
 }
