@@ -6,152 +6,26 @@
   <link rel="icon" href="/favicon.png" type="image/png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arijeet Das | Portfolio</title>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div id="root"></div>
+  <noscript>This portfolio needs JavaScript enabled for the scroll-driven experience.</noscript>
 
-<header class="navbar">
-  <div class="nav-container">
-    <div class="logo">Arijeet.</div>
-
-    <nav id="nav">
-      <ul class="nav-links">
-        <li><a href="#home" class="nav-link active">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-    </nav>
-
-    <div class="nav-actions">
-      <button id="theme-toggle" aria-label="Toggle theme">
-        <img id="theme-icon" src="assets/icons/moon.svg" alt="Theme toggle" />
-      </button>
-
-      <button id="menu-btn" class="menu-btn" aria-label="Toggle navigation menu">
-        <span class="menu-icon" aria-hidden="true">
-          <span class="menu-line"></span>
-          <span class="menu-line"></span>
-          <span class="menu-line"></span>
-        </span>
-      </button>
-    </div>
-  </div>
-</header>
-
-<section id="home" class="section-full reveal">
-  <div class="hero-content">
-    <div class="hero-image">
-      <img src="assets/profile.png" alt="Arijeet Das" />
-    </div>
-
-    <div class="hero-text">
-      <p class="eyebrow">App Developer • Flutter • Android • iOS</p>
-      <h1>Hi, I'm <span>Arijeet Das</span></h1>
-      <p>
-        I design and ship high-quality applications with clean architecture, strong performance, and user-centered UX across mobile and cross-platform environments.
-      </p>
-      <div class="hero-cta">
-        <a href="assets/resume/Arijeet_Das_Resume.pdf" download class="btn">Download Resume</a>
-        <a href="#projects" class="btn btn-secondary">Explore Projects</a>
-      </div>
-      <div class="hero-metrics">
-        <div><strong>Mobile-first</strong><span>Built for real-world users</span></div>
-        <div><strong>Clean UX</strong><span>Consistent product quality</span></div>
-        <div><strong>Engineering quality</strong><span>Scalable, maintainable code</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="separator"></div>
-
-<section id="about" class="section-full reveal">
-  <div class="split">
-    <img src="assets/images/about.svg" class="illus illus-lg" alt="About" />
-    <div>
-      <h2>About Me</h2>
-      <p>
-        I am a Computer Science Engineering student focused on app development, with hands-on experience across Flutter and native ecosystems. I use core computer science fundamentals to build reliable, scalable products with clear architecture and long-term maintainability.
-      </p>
-      <p>
-        I enjoy owning the full development lifecycle, from translating requirements into robust implementation to performance tuning and UX refinement. I prioritize clarity, consistency, and execution speed, and I adapt quickly in both startup-paced and structured team environments.
-      </p>
-    </div>
-  </div>
-</section>
-
-<div class="separator"></div>
-
-<section id="skills" class="section-full reveal">
-  <div class="split">
-    <img src="assets/images/skills.svg" class="illus illus-md" alt="Skills" />
-    <div>
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <span>Java</span>
-        <span>C</span>
-        <span>Python</span>
-        <span>Dart / Flutter</span>
-        <span>Kotlin / Native Android</span>
-        <span>Swift / Native iOS</span>
-        <span>SQL / MongoDB</span>
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Git & GitHub</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="separator"></div>
-
-<section id="projects" class="section-full reveal">
-  <div class="split">
-    <img src="assets/images/projects.svg" class="illus illus-lg" alt="Projects" />
-    <div>
-      <h2>Projects</h2>
-      <p>
-        My work focuses on practical products that balance strong engineering with polished design. The portfolio includes cross-platform Flutter applications and platform-ready builds for Android, iOS, Windows, and Linux.
-      </p>
-      <a href="projects.html" class="btn">View All Projects</a>
-    </div>
-  </div>
-</section>
-
-<div class="separator"></div>
-
-<section id="contact" class="section-full reveal">
-  <div class="split">
-    <img src="assets/images/contact.svg" class="illus illus-lg" alt="Contact" />
-    <div>
-      <h2>Contact</h2>
-      <p>Open to internships and app development roles where product quality and user impact matter.</p>
-      <div class="contact-links">
-        <a href="https://github.com/arijeetdas" target="_blank" rel="noopener noreferrer" class="contact-item">
-          <img src="assets/icons/github.svg" alt="GitHub" />
-          <span>GitHub</span>
-        </a>
-
-        <a href="#" target="_blank" rel="noopener noreferrer" class="contact-item">
-          <img src="assets/icons/linkedin.svg" alt="LinkedIn" />
-          <span>LinkedIn</span>
-        </a>
-
-        <a href="mailto:arijeetdas900@gmail.com" class="contact-item">
-          <img src="assets/icons/mail.svg" alt="Email" />
-          <span>Email</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>© 2026 Arijeet Das</footer>
-
-<script src="script.js"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@18.3.1",
+        "react/jsx-runtime": "https://esm.sh/react@18.3.1/jsx-runtime",
+        "react-dom": "https://esm.sh/react-dom@18.3.1",
+        "react-dom/client": "https://esm.sh/react-dom@18.3.1/client",
+        "framer-motion": "https://esm.sh/framer-motion@12.23.24?external=react,react-dom"
+      }
+    }
+  </script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>
