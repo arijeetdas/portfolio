@@ -289,6 +289,47 @@ noscript {
   letter-spacing: 0.1em;
 }
 
+/* Disable floating element animations on mobile and for reduced motion preference */
+@media (max-width: 1024px) {
+  .floating-element {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .floating-element {
+    animation: none !important;
+    transform: none !important;
+    display: none; /* Completely hide on mobile for better performance */
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-element {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+/* Performance optimizations for mobile */
+@media (max-width: 768px) {
+  /* Disable expensive background effects on mobile */
+  .background-aura {
+    display: none;
+  }
+  
+  .background-noise {
+    display: none;
+  }
+  
+  /* Simplify scroll background animations */
+  .scroll-background {
+    background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%) !important;
+    background-attachment: fixed !important;
+  }
+}
+
 @media (pointer: fine) {
   body.custom-cursor-active {
     cursor: none !important;
