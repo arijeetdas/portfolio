@@ -18,6 +18,47 @@ const navItems = [
   { id: "contact", label: "Contact" }
 ];
 
+// Mobile detection hook
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      // More aggressive mobile detection for performance
+      const mobile = window.innerWidth <= 1024 || 
+                    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+                    window.innerWidth <= 768; // Tablets and smaller
+      setIsMobile(mobile);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  return isMobile;
+}
+
+// Performance detection hook
+function useLowPerformance() {
+  const [isLowPerformance, setIsLowPerformance] = useState(false);
+
+  useEffect(() => {
+    // Check for low-end devices or reduced performance preference
+    const checkPerformance = () => {
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const isSlowDevice = navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4;
+      const isOldBrowser = !window.requestAnimationFrame || !window.performance;
+      
+      setIsLowPerformance(prefersReducedMotion || isSlowDevice || isOldBrowser);
+    };
+
+    checkPerformance();
+  }, []);
+
+  return isLowPerformance;
+}
+
 const sections = [
   {
     id: "home",
@@ -186,6 +227,10 @@ function createSectionTimeline(index, total) {
 }
 
 function ScrollBackground({ progress }) {
+  const isMobile = useIsMobile();
+  const isLowPerformance = useLowPerformance();
+  const shouldMinimizeAnimations = isMobile || isLowPerformance;
+  
   // One smoothed global scroll value drives every color stop, so fast scrolling
   // morphs directly to the target theme instead of stepping section-by-section.
   const glowA = useTransform(progress, scrollStops, backgroundThemes.glowA);
@@ -222,17 +267,28 @@ function ScrollBackground({ progress }) {
     h("div", { className: "background-aura aura-two" }),
     h("div", { className: "background-aura aura-three" }),
     h("div", { className: "background-noise" }),
-    // Floating elements - optimized for performance
-    h(motion.div, { className: "floating-element", style: { left: "8%", top: "15%" }, animate: { y: [0, -20, 0], rotate: [0, 2, 0] }, transition: { duration: 12, repeat: Infinity, ease: "easeInOut" } }, "</>"),
-    h(motion.div, { className: "floating-element", style: { right: "12%", top: "25%" }, animate: { y: [0, -25, 0], rotate: [0, -1, 0] }, transition: { duration: 14, repeat: Infinity, ease: "easeInOut", delay: 1 } }, "{}"),
-    h(motion.div, { className: "floating-element", style: { left: "20%", top: "40%" }, animate: { y: [0, -15, 0], rotate: [0, 3, 0] }, transition: { duration: 11, repeat: Infinity, ease: "easeInOut", delay: 2 } }, "⚡"),
-    h(motion.div, { className: "floating-element", style: { right: "15%", top: "55%" }, animate: { y: [0, -20, 0], rotate: [0, -2, 0] }, transition: { duration: 13, repeat: Infinity, ease: "easeInOut", delay: 0.5 } }, "🚀"),
-    h(motion.div, { className: "floating-element", style: { left: "25%", top: "70%" }, animate: { y: [0, -18, 0], rotate: [0, 1, 0] }, transition: { duration: 15, repeat: Infinity, ease: "easeInOut", delay: 1.5 } }, "💻"),
-    h(motion.div, { className: "floating-element", style: { right: "8%", top: "35%" }, animate: { y: [0, -22, 0], rotate: [0, -3, 0] }, transition: { duration: 12.5, repeat: Infinity, ease: "easeInOut", delay: 0.8 } }, "◆"),
-    h(motion.div, { className: "floating-element", style: { left: "35%", top: "20%" }, animate: { y: [0, -16, 0], rotate: [0, 2, 0] }, transition: { duration: 13.5, repeat: Infinity, ease: "easeInOut", delay: 1.2 } }, "◇"),
-    h(motion.div, { className: "floating-element", style: { right: "25%", top: "75%" }, animate: { y: [0, -19, 0], rotate: [0, -1, 0] }, transition: { duration: 11.5, repeat: Infinity, ease: "easeInOut", delay: 2.2 } }, "✦"),
-    h(motion.div, { className: "floating-element", style: { left: "45%", top: "50%" }, animate: { y: [0, -21, 0], rotate: [0, 3, 0] }, transition: { duration: 14.5, repeat: Infinity, ease: "easeInOut", delay: 0.3 } }, "∞"),
-    h(motion.div, { className: "floating-element", style: { right: "35%", top: "85%" }, animate: { y: [0, -17, 0], rotate: [0, -2, 0] }, transition: { duration: 12.8, repeat: Infinity, ease: "easeInOut", delay: 1.8 } }, "▪")
+    // Floating elements - performance optimized
+    shouldMinimizeAnimations ? (
+      // Minimal elements for mobile/low-performance devices
+      h("div", { 
+        className: "floating-element", 
+        style: { left: "15%", top: "30%" }
+      }, "⚡")
+    ) : (
+      // Full elements for desktop/high-performance devices
+      [
+        h(motion.div, { className: "floating-element", style: { left: "8%", top: "15%" }, animate: { y: [0, -20, 0], rotate: [0, 2, 0] }, transition: { duration: 12, repeat: Infinity, ease: "easeInOut" } }, "</>"),
+        h(motion.div, { className: "floating-element", style: { right: "12%", top: "25%" }, animate: { y: [0, -25, 0], rotate: [0, -1, 0] }, transition: { duration: 14, repeat: Infinity, ease: "easeInOut", delay: 1 } }, "{}"),
+        h(motion.div, { className: "floating-element", style: { left: "20%", top: "40%" }, animate: { y: [0, -15, 0], rotate: [0, 3, 0] }, transition: { duration: 11, repeat: Infinity, ease: "easeInOut", delay: 2 } }, "⚡"),
+        h(motion.div, { className: "floating-element", style: { right: "15%", top: "55%" }, animate: { y: [0, -20, 0], rotate: [0, -2, 0] }, transition: { duration: 13, repeat: Infinity, ease: "easeInOut", delay: 0.5 } }, "🚀"),
+        h(motion.div, { className: "floating-element", style: { left: "25%", top: "70%" }, animate: { y: [0, -18, 0], rotate: [0, 1, 0] }, transition: { duration: 15, repeat: Infinity, ease: "easeInOut", delay: 1.5 } }, "💻"),
+        h(motion.div, { className: "floating-element", style: { right: "8%", top: "35%" }, animate: { y: [0, -22, 0], rotate: [0, -3, 0] }, transition: { duration: 12.5, repeat: Infinity, ease: "easeInOut", delay: 0.8 } }, "◆"),
+        h(motion.div, { className: "floating-element", style: { left: "35%", top: "20%" }, animate: { y: [0, -16, 0], rotate: [0, 2, 0] }, transition: { duration: 13.5, repeat: Infinity, ease: "easeInOut", delay: 1.2 } }, "◇"),
+        h(motion.div, { className: "floating-element", style: { right: "25%", top: "75%" }, animate: { y: [0, -19, 0], rotate: [0, -1, 0] }, transition: { duration: 11.5, repeat: Infinity, ease: "easeInOut", delay: 2.2 } }, "✦"),
+        h(motion.div, { className: "floating-element", style: { left: "45%", top: "50%" }, animate: { y: [0, -21, 0], rotate: [0, 3, 0] }, transition: { duration: 14.5, repeat: Infinity, ease: "easeInOut", delay: 0.3 } }, "∞"),
+        h(motion.div, { className: "floating-element", style: { right: "35%", top: "85%" }, animate: { y: [0, -17, 0], rotate: [0, -2, 0] }, transition: { duration: 12.8, repeat: Infinity, ease: "easeInOut", delay: 1.8 } }, "▪")
+      ]
+    )
   );
 }
 
