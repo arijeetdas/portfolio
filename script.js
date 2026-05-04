@@ -222,26 +222,17 @@ function ScrollBackground({ progress }) {
     h("div", { className: "background-aura aura-two" }),
     h("div", { className: "background-aura aura-three" }),
     h("div", { className: "background-noise" }),
-    // Floating elements grid
-    h(motion.div, { className: "floating-element", style: { left: "5%", top: "10%" }, animate: { y: [0, -20, 0], rotate: [0, 3, 0] }, transition: { duration: 8, repeat: Infinity, ease: "easeInOut" } }, "</>"),
-    h(motion.div, { className: "floating-element", style: { left: "12%", top: "25%" }, animate: { y: [0, -25, 0], rotate: [0, -2, 0] }, transition: { duration: 10, repeat: Infinity, ease: "easeInOut", delay: 0.5 } }, "{}"),
-    h(motion.div, { className: "floating-element", style: { left: "20%", top: "40%" }, animate: { y: [0, -15, 0], rotate: [0, 4, 0] }, transition: { duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 } }, "⚡"),
-    h(motion.div, { className: "floating-element", style: { left: "8%", top: "60%" }, animate: { y: [0, -20, 0], rotate: [0, -3, 0] }, transition: { duration: 9, repeat: Infinity, ease: "easeInOut", delay: 1.5 } }, "🚀"),
-    h(motion.div, { className: "floating-element", style: { left: "15%", top: "78%" }, animate: { y: [0, -22, 0], rotate: [0, 2, 0] }, transition: { duration: 11, repeat: Infinity, ease: "easeInOut", delay: 2 } }, "💻"),
-    h(motion.div, { className: "floating-element", style: { right: "10%", top: "15%" }, animate: { y: [0, -18, 0], rotate: [0, -4, 0] }, transition: { duration: 9.5, repeat: Infinity, ease: "easeInOut", delay: 0.3 } }, "🔋"),
-    h(motion.div, { className: "floating-element", style: { right: "8%", top: "35%" }, animate: { y: [0, -25, 0], rotate: [0, 3, 0] }, transition: { duration: 8.5, repeat: Infinity, ease: "easeInOut", delay: 1.2 } }, "∞"),
-    h(motion.div, { className: "floating-element", style: { right: "15%", top: "55%" }, animate: { y: [0, -20, 0], rotate: [0, -2, 0] }, transition: { duration: 10.5, repeat: Infinity, ease: "easeInOut", delay: 0.8 } }, "🖨️"),
-    h(motion.div, { className: "floating-element", style: { right: "12%", top: "72%" }, animate: { y: [0, -15, 0], rotate: [0, 4, 0] }, transition: { duration: 7.5, repeat: Infinity, ease: "easeInOut", delay: 1.8 } }, "✦"),
-    h(motion.div, { className: "floating-element", style: { right: "20%", top: "88%" }, animate: { y: [0, -23, 0], rotate: [0, -1, 0] }, transition: { duration: 9, repeat: Infinity, ease: "easeInOut", delay: 2.3 } }, "✅"),
-    h(motion.div, { className: "floating-element", style: { left: "28%", top: "22%" }, animate: { y: [0, -20, 0], rotate: [0, 2, 0] }, transition: { duration: 11.5, repeat: Infinity, ease: "easeInOut", delay: 0.7 } }, "⚙️"),
-    h(motion.div, { className: "floating-element", style: { left: "32%", top: "50%" }, animate: { y: [0, -18, 0], rotate: [0, -3, 0] }, transition: { duration: 8.8, repeat: Infinity, ease: "easeInOut", delay: 1.4 } }, "🤖"),
-    h(motion.div, { className: "floating-element", style: { left: "25%", top: "68%" }, animate: { y: [0, -24, 0], rotate: [0, 3, 0] }, transition: { duration: 10.2, repeat: Infinity, ease: "easeInOut", delay: 2.1 } }, "💾"),
-    h(motion.div, { className: "floating-element", style: { right: "28%", top: "28%" }, animate: { y: [0, -19, 0], rotate: [0, -2, 0] }, transition: { duration: 9.3, repeat: Infinity, ease: "easeInOut", delay: 0.9 } }, "💻"),
-    h(motion.div, { className: "floating-element", style: { right: "25%", top: "65%" }, animate: { y: [0, -21, 0], rotate: [0, 4, 0] }, transition: { duration: 8.2, repeat: Infinity, ease: "easeInOut", delay: 1.6 } }, "📱"),
-    h(motion.div, { className: "floating-element", style: { left: "42%", top: "18%" }, animate: { y: [0, -22, 0], rotate: [0, 1, 0] }, transition: { duration: 10.8, repeat: Infinity, ease: "easeInOut", delay: 1.1 } }, "📞"),
-    h(motion.div, { className: "floating-element", style: { left: "38%", top: "70%" }, animate: { y: [0, -20, 0], rotate: [0, -3, 0] }, transition: { duration: 9.1, repeat: Infinity, ease: "easeInOut", delay: 2.4 } }, "📸"),
-    h(motion.div, { className: "floating-element", style: { right: "35%", top: "42%" }, animate: { y: [0, -17, 0], rotate: [0, 2, 0] }, transition: { duration: 7.8, repeat: Infinity, ease: "easeInOut", delay: 0.6 } }, "🔍"),
-    h(motion.div, { className: "floating-element", style: { right: "42%", top: "80%" }, animate: { y: [0, -23, 0], rotate: [0, -4, 0] }, transition: { duration: 11, repeat: Infinity, ease: "easeInOut", delay: 1.9 } }, "📺")
+    // Floating elements - optimized for performance
+    h(motion.div, { className: "floating-element", style: { left: "8%", top: "15%" }, animate: { y: [0, -20, 0], rotate: [0, 2, 0] }, transition: { duration: 12, repeat: Infinity, ease: "easeInOut" } }, "</>"),
+    h(motion.div, { className: "floating-element", style: { right: "12%", top: "25%" }, animate: { y: [0, -25, 0], rotate: [0, -1, 0] }, transition: { duration: 14, repeat: Infinity, ease: "easeInOut", delay: 1 } }, "{}"),
+    h(motion.div, { className: "floating-element", style: { left: "20%", top: "40%" }, animate: { y: [0, -15, 0], rotate: [0, 3, 0] }, transition: { duration: 11, repeat: Infinity, ease: "easeInOut", delay: 2 } }, "⚡"),
+    h(motion.div, { className: "floating-element", style: { right: "15%", top: "55%" }, animate: { y: [0, -20, 0], rotate: [0, -2, 0] }, transition: { duration: 13, repeat: Infinity, ease: "easeInOut", delay: 0.5 } }, "🚀"),
+    h(motion.div, { className: "floating-element", style: { left: "25%", top: "70%" }, animate: { y: [0, -18, 0], rotate: [0, 1, 0] }, transition: { duration: 15, repeat: Infinity, ease: "easeInOut", delay: 1.5 } }, "💻"),
+    h(motion.div, { className: "floating-element", style: { right: "8%", top: "35%" }, animate: { y: [0, -22, 0], rotate: [0, -3, 0] }, transition: { duration: 12.5, repeat: Infinity, ease: "easeInOut", delay: 0.8 } }, "◆"),
+    h(motion.div, { className: "floating-element", style: { left: "35%", top: "20%" }, animate: { y: [0, -16, 0], rotate: [0, 2, 0] }, transition: { duration: 13.5, repeat: Infinity, ease: "easeInOut", delay: 1.2 } }, "◇"),
+    h(motion.div, { className: "floating-element", style: { right: "25%", top: "75%" }, animate: { y: [0, -19, 0], rotate: [0, -1, 0] }, transition: { duration: 11.5, repeat: Infinity, ease: "easeInOut", delay: 2.2 } }, "✦"),
+    h(motion.div, { className: "floating-element", style: { left: "45%", top: "50%" }, animate: { y: [0, -21, 0], rotate: [0, 3, 0] }, transition: { duration: 14.5, repeat: Infinity, ease: "easeInOut", delay: 0.3 } }, "∞"),
+    h(motion.div, { className: "floating-element", style: { right: "35%", top: "85%" }, animate: { y: [0, -17, 0], rotate: [0, -2, 0] }, transition: { duration: 12.8, repeat: Infinity, ease: "easeInOut", delay: 1.8 } }, "▪")
   );
 }
 
