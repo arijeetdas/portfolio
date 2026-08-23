@@ -3,44 +3,47 @@ import { ENGRAM_PROMPT } from "@/lib/engramPrompt";
 import fs from "fs";
 import path from "path";
 
-// robust API key resolving
-let apiKey = process.env.GEMINI_API_KEY || "";
-if (!apiKey) {
+function resolveEnvValue(key: string): string {
+  const valueFromRuntime = process.env[key];
+  if (valueFromRuntime && valueFromRuntime.trim()) {
+    return valueFromRuntime.trim();
+  }
+
   try {
     const envPath = path.join(process.cwd(), ".env");
-    if (fs.existsSync(envPath)) {
-      const content = fs.readFileSync(envPath, "utf-8");
-      content.split(/\r?\n/).forEach((line) => {
-        const trimmed = line.trim();
-        if (!trimmed || trimmed.startsWith("#")) return;
-        const eqIdx = trimmed.indexOf("=");
-        if (eqIdx === -1) return;
-        const key = trimmed.slice(0, eqIdx).trim();
-        let val = trimmed.slice(eqIdx + 1).trim();
-        if ((val.startsWith('"') && val.endsWith('"')) ||
-            (val.startsWith("'") && val.endsWith("'"))) {
-          val = val.slice(1, -1);
-        }
-        if (key === "GEMINI_API_KEY") {
-          apiKey = val;
-        }
-      });
+    if (!fs.existsSync(envPath)) return "";
+
+    const content = fs.readFileSync(envPath, "utf-8");
+    for (const line of content.split(/\r?\n/)) {
+      const trimmed = line.trim();
+      if (!trimmed || trimmed.startsWith("#")) continue;
+
+      const eqIdx = trimmed.indexOf("=");
+      if (eqIdx === -1) continue;
+
+      const currentKey = trimmed.slice(0, eqIdx).trim();
+      let currentValue = trimmed.slice(eqIdx + 1).trim();
+
+      if ((currentValue.startsWith('"') && currentValue.endsWith('"')) ||
+          (currentValue.startsWith("'") && currentValue.endsWith("'"))) {
+        currentValue = currentValue.slice(1, -1);
+      }
+
+      if (currentKey === key && currentValue) {
+        return currentValue.trim();
+      }
     }
-  } catch (e) {
-    // ignore
+  } catch {
+    // Ignore missing or unreadable local .env file.
   }
+
+  return "";
 }
 
-// Clean any surrounding quotes
-if (apiKey.startsWith('"') && apiKey.endsWith('"')) {
-  apiKey = apiKey.slice(1, -1);
-}
-if (apiKey.startsWith("'") && apiKey.endsWith("'")) {
-  apiKey = apiKey.slice(1, -1);
-}
+const apiKey = resolveEnvValue("GEMINI_API_KEY").replace(/^['"]|['"]$/g, "");
 
 const ai = new GoogleGenAI({
-  apiKey: apiKey,
+  apiKey,
 });
 
 export async function POST(req: Request) {

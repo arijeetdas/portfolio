@@ -14,8 +14,9 @@ const root = process.cwd();
 const port = Number(process.env.PORT || 5173);
 
 /* --------------------------------------------------------------------------
-   READ .env FILE MANUALLY (dotenv not installed)
-   Parses KEY="VALUE" or KEY=VALUE lines; ignores comments
+   READ LOCAL .env FILE MANUALLY (dotenv not installed)
+   - Vercel environment variables take precedence
+   - local development falls back to the root .env file only
    -------------------------------------------------------------------------- */
 function loadDotEnv() {
   try {
@@ -28,15 +29,18 @@ function loadDotEnv() {
       if (eqIdx === -1) return;
       const key = trimmed.slice(0, eqIdx).trim();
       let val = trimmed.slice(eqIdx + 1).trim();
-      // Strip surrounding quotes if present
+
       if ((val.startsWith('"') && val.endsWith('"')) ||
           (val.startsWith("'") && val.endsWith("'"))) {
         val = val.slice(1, -1);
       }
-      process.env[key] = val;
+
+      if (!(key in process.env)) {
+        process.env[key] = val;
+      }
     });
   } catch {
-    // .env not found — rely on actual environment variables
+    // Ignore missing local .env file; real env vars (like Vercel) are still used.
   }
 }
 loadDotEnv();
