@@ -1,0 +1,218 @@
+{
+  "meta": {
+    "ownerName": "Arijeet Das",
+    "wordmark": "Arijeet Das",
+    "shellUser": "arijeet",
+    "shellHost": "kolkata",
+    "timezone": "Asia/Kolkata",
+    "footerNote": "Built in Kolkata, mostly after midnight"
+  },
+  "hero": {
+    "prompt": "whoami",
+    "title": "I build Flutter and Android apps that work offline and on-device",
+    "lead": "CSE student in Kolkata, graduating in 2027. DropNet moves files across your Wi-Fi with no internet, and UltraVision runs AI models on the phone itself.",
+    "primaryAction": "Download resume",
+    "secondaryAction": "See projects",
+    "portrait": "assets/profile.png",
+    "snippets": [
+      {
+        "file": "arijeet_das.dart",
+        "lines": [
+          "final developer = Developer(",
+          "  name: 'Arijeet Das',",
+          "  city: 'Kolkata',",
+          "  stack: ['Flutter', 'Kotlin'],",
+          "  status: Status.buildingUV,",
+          ");"
+        ]
+      },
+      {
+        "file": "zsh: dropnet",
+        "lines": [
+          "$ dropnet send semester_notes.zip",
+          "> found receiver  pixel-7 at 192.168.1.14",
+          "> session code    K7Q2MX",
+          "> sending         [##############....] 78%",
+          "> verified        sha256 ok, crc32 ok",
+          "$ # no internet was harmed"
+        ]
+      },
+      {
+        "file": "ultravision.dart",
+        "lines": [
+          "// runs on the phone, no server",
+          "final jarvis = Persona.jarvis;",
+          "await models.ensureFits(device.ram);",
+          "await jarvis.say('Good evening.');",
+          "// DUM-E: *beep* *whirr*"
+        ]
+      },
+      {
+        "file": "night_shift.dart",
+        "lines": [
+          "while (bugs.isNotEmpty) {",
+          "  coffee.refill();",
+          "  bugs.removeLast(); // adds two more",
+          "}",
+          "sleep(Duration.zero);"
+        ]
+      }
+    ]
+  },
+  "resume": {
+    "path": "assets/resume/Arijeet_Das_Resume.pdf",
+    "downloadName": "Arijeet_Das_Resume.pdf"
+  },
+  "about": {
+    "prompt": "cat about.md",
+    "title": "A CS student who ships real apps",
+    "paragraphs": [
+      "I'm in the 7th semester of B.Tech Computer Science & Engineering at Dr. Sudhir Chandra Sur Institute of Technology, MAKAUT, in Kolkata.",
+      "Most of what I know I learned by building things people can use. DropNet started as a this-should-be-simple file transfer idea and turned into months of debugging socket handshakes. Now I'm teaching a phone to run AI models without a server."
+    ],
+    "facts": [
+      { "value": "7.98", "label": "CGPA up to semester 6" },
+      { "value": "0", "label": "Backlogs" },
+      { "value": "2027", "label": "Graduating" },
+      { "value": "4", "label": "Apps built" }
+    ],
+    "entries": [
+      {
+        "kind": "work",
+        "title": "Android developer virtual internship",
+        "org": "EduSkills, Google Developer Program",
+        "period": "Jan – Mar 2026",
+        "body": "Kotlin, Jetpack Compose, Android fundamentals, networking and mobile UI."
+      },
+      {
+        "kind": "study",
+        "title": "B.Tech, Computer Science & Engineering",
+        "org": "Dr. Sudhir Chandra Sur Institute of Technology, MAKAUT",
+        "period": "2023 – 2027",
+        "body": "Data structures, OOP, DBMS, operating systems and computer networks."
+      }
+    ],
+    "now": [
+      "Building UltraVision, an on-device AI gallery",
+      "Shipping FetchNet updates",
+      "Learning advanced Flutter architecture and performance"
+    ]
+  },
+  "skills": {
+    "prompt": "ls ~/skills",
+    "title": "What I work with",
+    "lead": "Mobile first, with enough networking and on-device ML to make apps that don't need a server.",
+    "categories": [
+      { "id": "languages", "title": "Languages", "items": ["Dart", "Kotlin", "Java", "Python", "JavaScript", "C", "SQL"] },
+      { "id": "mobile", "title": "Mobile", "items": ["Flutter", "Android SDK", "Jetpack Compose", "Material 3", "Riverpod"] },
+      { "id": "systems", "title": "Networking and on-device ML", "items": ["Sockets", "UDP discovery", "Encryption", "llama.cpp", "ONNX Runtime", "Whisper"] },
+      { "id": "data", "title": "Data", "items": ["Firebase", "Cloud Firestore", "Hive", "MongoDB", "Supabase"] },
+      { "id": "core", "title": "CS foundations", "items": ["Data structures", "OOP", "DBMS", "Operating systems", "Computer networks"] },
+      { "id": "tools", "title": "Tools", "items": ["Git", "GitHub", "Android Studio", "VS Code", "Claude", "GitHub Copilot"] }
+    ]
+  },
+  "projects": {
+    "prompt": "ls ~/projects",
+    "title": "Projects",
+    "lead": "Two apps you can use today, one terminal tool, and one I'm still building.",
+    "items": [
+      {
+        "id": "dropnet",
+        "title": "DropNet",
+        "status": "Live",
+        "tone": "live",
+        "tag": "Flutter, LAN, peer to peer",
+        "summary": "Send files between your own devices over Wi-Fi, with no internet and no accounts",
+        "description": "A cross-platform file transfer app for Android, Windows, Linux, macOS and iOS. Devices find each other on the local network and talk directly, and a browser portal lets a device receive files without installing anything.",
+        "highlights": [
+          "Direct device-to-device transfers over the local network",
+          "Browser portal for app-free receiving",
+          "Pair-only secure mode"
+        ],
+        "tech": ["Flutter", "Dart", "Sockets", "HTTP", "Material Design"],
+        "preview": "dropnet",
+        "github": "https://git.dropnet.arijeet.in",
+        "live": "https://dropnet.arijeet.in"
+      },
+      {
+        "id": "ultravision",
+        "title": "UltraVision",
+        "status": "In development, public soon",
+        "tone": "dev",
+        "tag": "Flutter, on-device AI",
+        "summary": "AI that runs on your phone, not on a server",
+        "description": "An on-device AI gallery for Android, iOS, macOS, Windows and Linux. Chat with nine Marvel-inspired personas, search photos as you type, find moments in videos, transcribe audio and upscale images, with every model running locally.",
+        "highlights": [
+          "Nine personas, each with its own offline voice",
+          "CLIP photo and video search, Whisper transcription, llama.cpp chat",
+          "Model Marketplace with RAM-fit hints and verified downloads"
+        ],
+        "tech": ["Flutter", "Riverpod", "llama.cpp", "ONNX Runtime", "Whisper", "Firebase"],
+        "preview": "ultravision",
+        "note": "Not public yet. It will be released soon."
+      },
+      {
+        "id": "fetchnet",
+        "title": "FetchNet",
+        "status": "v1.3.0",
+        "tone": "live",
+        "tag": "Flutter, yt-dlp, gallery-dl",
+        "summary": "Paste a link, pick a quality, done",
+        "description": "A downloader for video, audio and images on Android and Windows. It is a clean interface for the open-source tools yt-dlp and gallery-dl, with everything they need bundled on Android.",
+        "highlights": [
+          "Video from 144p to 4K, or audio as MP3, M4A or the original stream",
+          "Galleries and posts from Instagram, X, Reddit and more",
+          "Links shared from other Android apps open straight in it"
+        ],
+        "tech": ["Flutter", "Dart", "yt-dlp", "gallery-dl", "FFmpeg"],
+        "preview": "fetchnet",
+        "github": "https://github.com/arijeetdas/FetchNet",
+        "live": "https://fetchnet.arijeet.in"
+      },
+      {
+        "id": "dropnet-cli",
+        "title": "DropNet-CLI",
+        "status": "Working tool",
+        "tone": "neutral",
+        "tag": "Python, terminal",
+        "summary": "DropNet's terminal companion, in pure Python",
+        "description": "Sends any file to another device on the same network from the command line. It runs on Windows, Linux, macOS and Termux on Android.",
+        "highlights": [
+          "Finds receivers through a UDP beacon, or sends to a known IP",
+          "Optional Fernet encryption with a 6-character session code",
+          "SHA-256 and CRC32 checks on every transfer"
+        ],
+        "tech": ["Python", "Sockets", "Fernet", "rich"],
+        "preview": "cli"
+      }
+    ]
+  },
+  "playground": {
+    "prompt": "./arijeetos --ask",
+    "title": "Things to ask ArijeetOS",
+    "lead": "The AI version of me lives in the corner of this page. It knows my projects, my grades and my opinions on tabs.",
+    "prompts": [
+      { "label": "Roast my portfolio", "text": "/roast" },
+      { "label": "Tell me a 2 a.m. debugging story", "text": "Tell me a 2 a.m. debugging story" },
+      { "label": "Explain DropNet like I'm five", "text": "/eli5 DropNet" },
+      { "label": "Which UltraVision persona am I", "text": "/persona" },
+      { "label": "Quiz me about Arijeet", "text": "/quiz" },
+      { "label": "Will I get hired", "text": "/8ball Will I get hired?" },
+      { "label": "Rock, paper, scissors", "text": "/rps rock" },
+      { "label": "sudo hack", "text": "sudo hack" }
+    ]
+  },
+  "contact": {
+    "prompt": "ping arijeet",
+    "title": "Let's build something",
+    "lead": "Open to internships, junior developer roles and app-building collaborations. Email is fastest.",
+    "email": "contact@arijeet.in",
+    "channels": [
+      { "type": "email", "label": "Email", "value": "contact@arijeet.in", "href": "mailto:contact@arijeet.in" },
+      { "type": "github", "label": "GitHub", "value": "arijeetdas", "href": "https://github.arijeet.in" },
+      { "type": "linkedin", "label": "LinkedIn", "value": "arijeetdas-dev", "href": "https://linkedin.arijeet.in" },
+      { "type": "whatsapp", "label": "WhatsApp", "value": "@arijeetdas.in", "href": "https://whatsapp.arijeet.in" },
+      { "type": "phone", "label": "Phone", "value": "+91 6290724324", "href": "tel:+916290724324" }
+    ]
+  }
+}

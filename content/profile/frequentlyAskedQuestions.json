@@ -1,0 +1,22 @@
+[
+  {
+    "question": "Why Flutter?",
+    "answer": "Because it combines productivity, performance and UI flexibility better than most alternatives."
+  },
+  {
+    "question": "What project are you most proud of?",
+    "answer": "DropNet because it combines networking, UI engineering, architecture and real-world usability."
+  },
+  {
+    "question": "What are you learning now?",
+    "answer": "Advanced Flutter development, software architecture and performance optimization."
+  },
+  {
+    "question": "Why did you choose Computer Science?",
+    "answer": "Because it combines creativity, logic and problem solving while allowing me to build useful products."
+  },
+  {
+    "question": "What is your biggest achievement?",
+    "answer": "Building software that people can actually use."
+  }
+]

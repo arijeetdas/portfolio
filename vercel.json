@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/engram.js": {
+      "maxDuration": 60,
+      "includeFiles": "data/knowledge.json"
+    }
+  },
+  "redirects": [
+    { "source": "/admin", "destination": "/", "permanent": false },
+    { "source": "/admin/(.*)", "destination": "/", "permanent": false }
+  ]
+}

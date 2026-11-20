@@ -1,0 +1,22 @@
+[
+  {
+    "role": "Android Developer Virtual Internship",
+    "organization": "EduSkills Foundation (Google Developer Program)",
+    "duration": "Jan 2026 – Mar 2026",
+    "description": "Completed a Google developer program supported Android development internship through EduSkills. Gained hands-on exposure to Kotlin, Jetpack Compose, Android fundamentals, networking and mobile UI development. Developed basic Android applications as part of practical learning modules.",
+    "technologies": [
+      "Kotlin",
+      "Jetpack Compose",
+      "Android SDK",
+      "Networking",
+      "Android Studio"
+    ],
+    "learnings": [
+      "Android Application Development",
+      "Jetpack Compose UI",
+      "Android SDK Fundamentals",
+      "Kotlin Programming",
+      "Networking & Architecture"
+    ]
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "currentDegree": "Bachelor of Technology",
+  "branch": "Computer Science & Engineering",
+  "institution": "Dr. Sudhir Chandra Sur Institute Of Technology And Sports Complex, MAKAUT",
+  "city": "Kolkata",
+  "duration": "2023 - 2027",
+  "currentSemester": "7th Semester",
+  "cgpa": "7.98 (up to 6th semester)",
+  "backlogs": "None (0 active backlogs)",
+  "academicStanding": "7.98 CGPA up to 6th semester with zero backlogs",
+  "coursework": [
+    "Data Structures and Algorithms",
+    "Object Oriented Programming",
+    "Database Management Systems",
+    "Operating Systems",
+    "Computer Networks",
+    "Software Engineering"
+  ],
+  "school": {
+    "name": "Khalsa Model Senior Secondary School",
+    "board": "CBSE",
+    "class10": {
+      "passingYear": "2021",
+      "percentage": "92.6%"
+    },
+    "class12": {
+      "passingYear": "2023",
+      "percentage": "77%",
+      "stream": "Science",
+      "subjects": [
+        "Computer Science",
+        "Physics",
+        "Chemistry",
+        "Mathematics",
+        "English"
+      ]
+    }
+  }
+}

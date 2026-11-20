@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Google Cloud Computing Fundamentals",
+    "organization": "Google Developer Student Clubs",
+    "year": "2023",
+    "category": "Cloud Computing",
+    "certificatePath": "assets/Certificates/GDSC-2023.pdf"
+  },
+  {
+    "name": "Google GenAI Study Jams",
+    "organization": "Google Developer Groups",
+    "year": "2024",
+    "category": "Generative AI",
+    "certificatePath": "assets/Certificates/GDG-2024"
+  },
+  {
+    "name": "Android App Development Training",
+    "organization": "Euphoria GenX",
+    "year": "2025",
+    "category": "Android Development",
+    "certificatePath": "assets/Certificates/Android_AppDev_2025"
+  },
+  {
+    "name": "MERN Full Stack Development",
+    "organization": "Institute of Advanced Learning And Skill Development",
+    "year": "2025",
+    "category": "Full Stack Development",
+    "certificatePath": "assets/Certificates/MERN_FS_2025.pdf"
+  },
+  {
+    "name": "Generative AI",
+    "organization": "Ardent",
+    "year": "2026",
+    "category": "Artificial Intelligence",
+    "certificatePath": "assets/Certificates/Ardent_GenAI_2026.pdf"
+  },
+  {
+    "name": "Android Developer Virtual Internship",
+    "organization": "Eduskills Foundation",
+    "year": "2026",
+    "category": "Internship",
+    "certificatePath": "assets/internship/Android_Developer_Virtual_Internship.pdf"
+  }
+]

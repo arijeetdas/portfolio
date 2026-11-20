@@ -1,0 +1,52 @@
+[
+  {
+    "id": "how-i-started-programming",
+    "title": "How I Got Into Programming",
+    "story": "My interest in programming came from curiosity about how software actually works. What started as experimentation gradually became a passion for building applications and solving problems through technology."
+  },
+  {
+    "id": "why-cse",
+    "title": "Why I Chose Computer Science",
+    "story": "Computer Science combines creativity, logic and problem solving. I enjoy the process of turning ideas into working products and constantly learning new technologies."
+  },
+  {
+    "id": "why-flutter",
+    "title": "Why Flutter Became My Favorite Technology",
+    "story": "Flutter's UI flexibility, performance and developer experience made it my preferred framework for mobile development."
+  },
+  {
+    "id": "dropnet-origin",
+    "title": "Why I Built DropNet",
+    "story": "I wanted offline file sharing to be simple, fast and reliable. Existing solutions often felt unnecessarily complicated or dependent on internet connectivity."
+  },
+  {
+    "id": "biggest-achievement",
+    "title": "My Biggest Achievement",
+    "story": "My biggest achievement isn't a certificate or a grade. It's building applications that people can actually use."
+  },
+  {
+    "id": "hardest-debugging",
+    "title": "Hardest Debugging Experience",
+    "story": "Networking and device-to-device communication bugs have been some of the most difficult issues I've encountered because they can be inconsistent and difficult to reproduce."
+  },
+  {
+    "id": "learning-style",
+    "title": "How I Learn",
+    "story": "I learn best by building. Creating projects, experimenting, breaking things and fixing them teaches me more than passive learning."
+  },
+  {
+    "id": "future",
+    "title": "Future Goals",
+    "story": "I want to become a highly skilled software engineer who builds impactful products and continuously learns emerging technologies."
+  },
+  {
+    "id": "ai-and-development",
+    "title": "How I Use AI",
+    "story": "I use AI as a productivity and learning accelerator for research, debugging, architecture discussions and exploring new ideas."
+  },
+  {
+    "id": "what-recruiters-should-know",
+    "title": "What Recruiters Should Know",
+    "story": "I enjoy building real software, learning independently and improving products through iteration. I value practical experience and continuous growth."
+  }
+]

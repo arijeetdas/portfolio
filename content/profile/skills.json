@@ -1,0 +1,49 @@
+{
+  "languages": [
+    "Dart",
+    "Kotlin",
+    "Java",
+    "Python",
+    "JavaScript",
+    "C"
+  ],
+  "frameworks": [
+    "Flutter",
+    "Android SDK",
+    "Jetpack Compose"
+  ],
+  "databases": [
+    "Firebase",
+    "SQL",
+    "MongoDB",
+    "Supabase"
+  ],
+  "tools": [
+    "Git",
+    "GitHub",
+    "REST APIs",
+    "Firebase",
+    "Android Studio",
+    "VS Code",
+    "ChatGPT",
+    "Claude",
+    "GitHub Copilot",
+    "llama.cpp",
+    "ONNX Runtime",
+    "yt-dlp"
+  ],
+  "concepts": [
+    "State Management",
+    "Networking",
+    "Socket Programming",
+    "P2P Communication",
+    "Responsive Design",
+    "Material Design",
+    "Local Storage",
+    "REST APIs",
+    "Offline First Applications",
+    "Performance Optimization",
+    "On-device machine learning",
+    "Encryption and integrity checks"
+  ]
+}

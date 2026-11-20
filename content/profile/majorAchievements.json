@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Built Real-World Software Products",
+    "description": "Focused on building software that solves practical problems rather than creating portfolio placeholders."
+  },
+  {
+    "title": "Creator of DropNet",
+    "description": "Designed and developed a peer-to-peer offline file transfer application."
+  },
+  {
+    "title": "On-device AI products",
+    "description": "Building UltraVision, an on-device AI gallery (in development, public soon), and ArijeetOS, the AI version of me on this portfolio."
+  },
+  {
+    "title": "Continuous Self Learning",
+    "description": "Consistently learns new technologies through projects, certifications and experimentation."
+  },
+  {
+    "title": "Shipped FetchNet",
+    "description": "Released FetchNet v1.3.0, a Flutter downloader for Android and Windows built on yt-dlp and gallery-dl."
+  }
+]

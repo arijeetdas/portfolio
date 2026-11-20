@@ -1,24 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark" data-phosphor="amber">
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/favicon.png" type="image/png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arijeet Das | Portfolio</title>
-  <meta name="description" content="Portfolio of Arijeet Das, a Computer Science Engineering student specializing in Flutter, native Android, clean architecture, and highly-polished user interfaces." />
-  <meta name="keywords" content="Arijeet Das, Software Engineer, App Developer, Mobile Developer, Flutter, Kotlin, Java, Portfolio, CS Student" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Arijeet Das, Flutter and Android developer</title>
+  <meta name="description" content="Arijeet Das is a CSE student in Kolkata who builds Flutter and Android apps that work offline and on-device: DropNet, FetchNet, DropNet-CLI and UltraVision." />
   <meta name="author" content="Arijeet Das" />
-  
+  <meta name="theme-color" content="#0b0d14" />
+  <link rel="icon" href="/favicon.ico?v=2" sizes="16x16 32x32 48x48 64x64">
+  <link rel="icon" href="/favicon.png?v=2" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
+
+  <script>
+    // Apply the saved theme and phosphor before first paint (no flash).
+    try {
+      var t = localStorage.getItem("arijeet.theme");
+      var p = localStorage.getItem("arijeet.phosphor");
+      if (t === "light") document.documentElement.dataset.theme = "light";
+      if (p && /^(amber|green|cyan|rose|white)$/.test(p)) document.documentElement.dataset.phosphor = p;
+    } catch (e) {}
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div id="root"></div>
-  <noscript>This portfolio requires JavaScript to experience the custom-crafted interactive components.</noscript>
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <noscript>This portfolio needs JavaScript. You can still email contact@arijeet.in.</noscript>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@2.0.12/dist/lottie-player.js"></script>
 
   <script type="importmap">
     {
@@ -27,8 +38,7 @@
         "react/jsx-runtime": "https://esm.sh/react@18.3.1/jsx-runtime",
         "react-dom": "https://esm.sh/react-dom@18.3.1",
         "react-dom/client": "https://esm.sh/react-dom@18.3.1/client",
-        "framer-motion": "https://esm.sh/framer-motion@11.11.17?external=react,react-dom",
-        "lottie-react": "https://esm.sh/lottie-react@2.4.0?external=react,react-dom"
+        "framer-motion": "https://esm.sh/framer-motion@11.11.17?external=react,react-dom"
       }
     }
   </script>

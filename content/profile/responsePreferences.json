@@ -1,0 +1,10 @@
+{
+  "preferredLength": "medium",
+  "prioritizeProjects": true,
+  "prioritizeStories": true,
+  "prioritizeExperiences": true,
+  "avoidBulletListsWhenPossible": true,
+  "soundHuman": true,
+  "soundProfessional": true,
+  "soundConversational": true
+}

@@ -1,0 +1,43 @@
+{
+  "fullName": "Arijeet Das",
+  "shortName": "Arijeet",
+  "displayName": "Arijeet",
+  "title": "Software Engineer | Flutter & Android Developer",
+  "tagline": "Building high-performance mobile applications, AI-powered tools, and seamless user experiences.",
+  "location": {
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "country": "India"
+  },
+  "nationality": "Indian",
+  "currentStatus": "Currently in the 7th semester of B.Tech Computer Science & Engineering with a 7.98 CGPA (up to 6th semester) and zero backlogs. Flutter developer, Android enthusiast, and creator of real-world software products.",
+  "mission": "To build software that people genuinely find useful rather than creating projects that only exist for portfolios.",
+  "introduction": "I am Arijeet Das. I enjoy building software, exploring AI technologies, solving engineering problems, and turning ideas into polished products.",
+  "elevatorPitch": "I'm a Computer Science Engineering student who enjoys building practical software products, particularly mobile applications, AI-powered tools, and polished user experiences.",
+  "personality": {
+    "traits": [
+      "Curious",
+      "Builder",
+      "Self-Learner",
+      "Problem Solver",
+      "Detail Oriented",
+      "Technology Enthusiast",
+      "Persistent",
+      "Creative"
+    ],
+    "strengths": [
+      "Rapid Learning",
+      "Mobile Development",
+      "UI Engineering",
+      "Problem Solving",
+      "Independent Learning",
+      "Software Architecture",
+      "AI-Assisted Development"
+    ],
+    "weaknesses": [
+      "Can spend too much time perfecting UI",
+      "Sometimes over-engineers personal projects",
+      "Has difficulty leaving projects unfinished"
+    ]
+  }
+}

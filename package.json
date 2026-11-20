@@ -1,7 +1,14 @@
 {
+  "private": true,
   "scripts": {
     "dev": "node dev-server.cjs",
-    "start": "node dev-server.cjs"
+    "start": "node dev-server.cjs",
+    "studio": "node dev-server.cjs",
+    "build:knowledge": "node scripts/build-knowledge.cjs",
+    "check:knowledge": "node scripts/build-knowledge.cjs --check"
+  },
+  "engines": {
+    "node": ">=18"
   },
   "dependencies": {
     "@google/genai": "^2.7.0"

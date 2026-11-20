@@ -1,0 +1,8 @@
+# Local-only tooling: the Knowledge Studio edits files on disk, which is
+# impossible on Vercel's read-only filesystem, so it is never deployed.
+admin/
+content/
+scripts/
+dev-server.cjs
+.env
+.env.*

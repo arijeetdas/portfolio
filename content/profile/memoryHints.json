@@ -1,0 +1,15 @@
+{
+  "priorityTopics": [
+    "DropNet",
+    "Flutter",
+    "Mobile Development",
+    "Career Goals",
+    "Certifications",
+    "Education",
+    "Projects",
+    "AI Usage",
+    "Learning Journey"
+  ],
+  "useStoriesForQuestions": true,
+  "responseStyle": "When possible, answer using stories and experiences rather than listing facts."
+}

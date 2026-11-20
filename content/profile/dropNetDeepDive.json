@@ -1,0 +1,14 @@
+{
+  "currentVersion": "2.4.x",
+  "purpose": "Offline file transfer without requiring internet connectivity.",
+  "keyFeatures": [
+    "Pair-only secure mode",
+    "Cross-platform support",
+    "Material Design UI",
+    "Offline LAN transfers",
+    "Modern animations"
+  ],
+  "hardestProblem": "Reliable device discovery and connection handling.",
+  "favoriteFeature": "Pair-only secure transfers.",
+  "whyProud": "It solves a real-world problem and continues to evolve."
+}

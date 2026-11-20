@@ -1,0 +1,31 @@
+{
+  "favoriteTechnology": "Flutter",
+  "favoriteProject": "DropNet",
+  "whyFlutter": "Flutter enables building beautiful, high-performance cross-platform applications with a single codebase while maintaining excellent UI flexibility.",
+  "biggestAchievement": "Building applications that are genuinely useful and solve real problems rather than creating placeholder projects.",
+  "proudestMoment": "Seeing personal projects evolve from ideas into functioning software products.",
+  "developmentPhilosophy": "Software should feel intuitive, responsive, polished, and enjoyable to use.",
+  "codingStyle": "Focuses on readability, maintainability, performance, and user experience.",
+  "currentFocus": [
+    "Improving DropNet",
+    "Advanced Flutter Development",
+    "AI Integration",
+    "Portfolio Experience Design"
+  ],
+  "enjoysMost": [
+    "Building Products",
+    "Learning Technologies",
+    "Improving UI/UX",
+    "Experimenting with AI",
+    "Solving Engineering Problems"
+  ],
+  "dislikes": [
+    "Laggy Interfaces",
+    "Poor UX",
+    "Unnecessary Complexity",
+    "Performance Bottlenecks"
+  ],
+  "favoritePartOfDevelopment": "Turning ideas into polished products.",
+  "preferredWorkStyle": "Build, iterate, improve.",
+  "biggestMotivation": "Creating software that people actually use."
+}

@@ -1,0 +1,171 @@
+[
+  {
+    "id": "dropnet",
+    "name": "DropNet",
+    "status": "Actively Developed",
+    "category": "Offline File Sharing Platform",
+    "description": "Cross-platform offline file transfer application built using Flutter.",
+    "shortDescription": "Fast and seamless peer-to-peer file sharing without relying on cloud storage.",
+    "originStory": "DropNet was created because many file transfer solutions either depended on internet connectivity or felt unnecessarily complicated.",
+    "technicalOverview": "Uses temporary local server architecture, socket communication, peer discovery and direct device-to-device networking concepts.",
+    "favoritePart": "Designing a seamless file-sharing experience with minimal friction.",
+    "challenges": [
+      "Peer discovery",
+      "Connection management",
+      "Reliable transfer handling",
+      "Cross-device compatibility",
+      "UI responsiveness"
+    ],
+    "futurePlans": [
+      "Further UI refinements",
+      "Additional networking improvements",
+      "Expanded platform support",
+      "Improved pairing experience"
+    ],
+    "lessonsLearned": [
+      "Networking bugs are usually harder than UI bugs.",
+      "Reliable communication is more difficult than it initially appears.",
+      "Simple UX often requires complex engineering."
+    ],
+    "technologies": [
+      "Flutter",
+      "Dart",
+      "Sockets",
+      "HTTP",
+      "Material Design"
+    ],
+    "importance": "Most important and most representative project.",
+    "recruiterPitch": "Demonstrates networking, architecture, UI engineering, state management and real-world problem solving.",
+    "website": "https://dropnet.arijeet.in",
+    "github": "https://git.dropnet.arijeet.in",
+    "relatedProjects": [
+      "DropNet-CLI (terminal companion written in Python)"
+    ]
+  },
+  {
+    "id": "ultravision",
+    "name": "UltraVision",
+    "status": "In development. Not public yet; it will be made public soon.",
+    "version": "0.0.5",
+    "category": "On-device AI gallery app",
+    "description": "A Flutter app that runs AI models on the device itself, with a Material 3 Expressive interface. Model weights are not bundled: you download them from the in-app Model Marketplace or import your own files.",
+    "shortDescription": "On-device AI gallery for Android, iOS, macOS, Windows and Linux. In development, public soon.",
+    "platforms": [
+      "Android",
+      "iOS",
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "features": [
+      "Playground with nine Marvel-inspired personas (Human Torch, J.A.R.V.I.S., DUM-E, U, F.R.I.D.A.Y., E.D.I.T.H., Vision, Ultron, Jocasta), each with its own tone, colour, shape and built-in offline voice",
+      "Plain model chat with thinking mode, stats, dictation and read-aloud",
+      "Agent Skills: Wikipedia, map cards, visual summaries, calculator, unit converter, photo search, image generation; extra skill packs load from a URL",
+      "Instant Media Search: photo search that updates as you type, using CLIP on ONNX Runtime",
+      "Video Moment Finder: embeds video frames with CLIP and ranks moments on a heat timeline",
+      "Ask Image: ask a vision model about up to 10 images",
+      "Audio Scribe: transcribe, summarise, translate or list action items from a recording",
+      "Prompt Lab with temperature, top-K and token controls plus TTFT and decode-speed stats",
+      "Tiny Garden: a 3x3 garden you tend with natural-language commands through function calls",
+      "Device Actions such as flashlight, alarms, calendar events and app launch, with confirmation for risky ones",
+      "Enhance & Upscale: on-device photo upscaling (2x/4x), face fix, denoise and repair with a before/after view",
+      "Model Marketplace with six categories, RAM-fit hints, resumable SHA-256 verified downloads"
+    ],
+    "technologies": [
+      "Flutter",
+      "Dart",
+      "Riverpod",
+      "llama.cpp (llamadart)",
+      "stable-diffusion.cpp",
+      "Whisper",
+      "ONNX Runtime (CLIP)",
+      "media_kit",
+      "Firebase Auth",
+      "Cloud Firestore",
+      "Hive"
+    ],
+    "originStory": "I wanted the AI features people usually rent from a server to run on the phone in your pocket, with the personality of the assistants I grew up watching.",
+    "favoritePart": "Every persona has its own voice that works offline. DUM-E and U even beep and whirr.",
+    "importance": "My most ambitious project so far. It is still in development and will be made public soon.",
+    "recruiterPitch": "Shows on-device ML integration (llama.cpp, CLIP, Whisper, diffusion), multi-platform Flutter architecture and product design at scale."
+  },
+  {
+    "id": "fetchnet",
+    "name": "FetchNet",
+    "status": "Released (v1.3.0)",
+    "category": "Cross-platform media downloader",
+    "description": "A simple cross-platform downloader for video, audio and images, built in Flutter as a graphical interface for the open-source tools yt-dlp and gallery-dl. Paste a link, pick a quality, done.",
+    "shortDescription": "Flutter front end for yt-dlp and gallery-dl on Android and Windows.",
+    "platforms": [
+      "Android 7.0+",
+      "Windows 10/11",
+      "macOS and Linux build from source (untested on hardware)"
+    ],
+    "features": [
+      "Paste links from YouTube and the thousands of sites yt-dlp supports; links shared from other Android apps open straight in it",
+      "Video from 144p to 4K merged to MP4, or audio as MP3 (320/192/128 kbps), M4A or the original stream",
+      "Posts and galleries from Instagram, X, Reddit, Pinterest and more through gallery-dl, sorted into Images, Audio and Video folders",
+      "On Android, yt-dlp, Python, FFmpeg and QuickJS are bundled in the app"
+    ],
+    "technologies": [
+      "Flutter",
+      "Dart",
+      "yt-dlp",
+      "gallery-dl",
+      "FFmpeg",
+      "Python"
+    ],
+    "website": "https://fetchnet.arijeet.in",
+    "github": "https://github.com/arijeetdas/FetchNet",
+    "disclaimer": "FetchNet only provides an interface to yt-dlp and gallery-dl. It does not host or distribute media; people should only download content they have the right to.",
+    "recruiterPitch": "Shows packaging native tooling (Python, FFmpeg) inside a Flutter app and shipping real releases."
+  },
+  {
+    "id": "dropnet-cli",
+    "name": "DropNet-CLI",
+    "status": "Working tool",
+    "category": "Terminal LAN file transfer",
+    "description": "A pure-Python command-line companion to DropNet that sends any file to another device on the same network. No internet, no cloud, no accounts.",
+    "shortDescription": "Encrypted, verified LAN file transfers from the terminal.",
+    "platforms": [
+      "Windows",
+      "Linux",
+      "macOS",
+      "Termux on Android"
+    ],
+    "features": [
+      "Zero-config discovery of receivers on the LAN through a UDP beacon, or send straight to a known IP",
+      "Optional end-to-end encryption with a 6-character session code using Fernet (AES-128-CBC + HMAC)",
+      "SHA-256 and CRC32 checks on every transfer",
+      "Animated progress bars and panels built with rich",
+      "Setup checker that detects and fixes the Python installation"
+    ],
+    "technologies": [
+      "Python 3.8+",
+      "Sockets",
+      "UDP broadcast",
+      "cryptography (Fernet)",
+      "rich"
+    ],
+    "recruiterPitch": "Shows low-level networking, encryption and integrity checks without a framework."
+  },
+  {
+    "id": "portfolio-website",
+    "name": "Portfolio Website",
+    "category": "Interactive Portfolio Experience",
+    "description": "Personal portfolio website showcasing projects, certifications, experiences and ArijeetOS.",
+    "shortDescription": "A portfolio designed to feel memorable rather than traditional.",
+    "importance": "Represents my professional identity and serves as the home of ArijeetOS.",
+    "favoritePart": "Turning a traditional portfolio into an interactive experience.",
+    "originStory": "Built because I wanted visitors to interact with my work instead of simply reading about it.",
+    "technologies": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Gemini API",
+      "Custom UI Design"
+    ],
+    "specialFeature": "Contains ArijeetOS, an interactive digital consciousness experience.",
+    "recruiterPitch": "Demonstrates creativity, frontend engineering and user experience design."
+  }
+]
